@@ -10,11 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: Prod
     steps:
-      - name: Remove File
-        uses: JesseTG/rm@v1.0.3
-        with:
-          path: /home/appvoiceofguru/public_html/testcpaneldeployment/
-#      - uses: actions/checkout@master
+      - uses: actions/checkout@master
       - name: copy file via ssh key
         uses: appleboy/scp-action@master
         with:
@@ -22,5 +18,6 @@ jobs:
           username: appvoiceofguru
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 1980
+          rm: true
           source: "app"
           target: "/home/appvoiceofguru/public_html/testcpaneldeployment/"
