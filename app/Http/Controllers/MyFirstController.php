@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 class MyFirstController extends Controller
 {
-    //
+    //Code goes here.
 }
