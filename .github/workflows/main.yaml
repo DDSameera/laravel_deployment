@@ -18,5 +18,5 @@ jobs:
           username: appvoiceofguru
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 1980
-          source: "doc"
+          source: "app"
           target: "/home/appvoiceofguru/public_html/testcpaneldeployment/"
